@@ -1,7 +1,7 @@
 /* global module:false */
 module.exports = function(grunt) {
 	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
+		pkg: '<json:package.json>',
 		meta: {
 			banner: '/*! <%= pkg.name %> */'
 		},
@@ -112,14 +112,7 @@ module.exports = function(grunt) {
 		uglify: {}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-less');
-	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	grunt.loadNpmTasks('grunt-jsmin-sourcemap');
+	grunt.loadNpmTasks('grunt-contrib');
 
 	grunt.registerTask("cors-server", "Runs a CORS proxy", function() {
 		var cors = require('./src/server/cors-proxy.js');
