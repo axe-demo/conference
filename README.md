@@ -20,3 +20,6 @@ Run `npm install` to install all the dependencies required for building the proj
 
 ### Deployment
 This application is currently deployed on github pages. Simply copy the `dist` folder and host it on any web server. 
+
+### License
+MIT License. See [LICENSE](LICENSE) for more details.
