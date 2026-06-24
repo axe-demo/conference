@@ -6,7 +6,9 @@
   "description": "A simple app to show schedules at a conference",
   "main": "./detlib/http-server",
   "scripts": {
-    "start": "grunt dev"
+    "start": "grunt dev",
+    "build": "grunt copy concat less",
+    "test": "playwright test"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,7 @@
     "conference"
   ],
   "devDependencies": {
+    "@playwright/test": "^1.49.0",
     "grunt": "^1.6.2",
     "grunt-contrib-concat": "^2.1.0",
     "grunt-contrib-connect": "^5.0.1",
