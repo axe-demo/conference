@@ -16,7 +16,7 @@ test.describe('Conference app', () => {
   test('shows top-level navigation links', async ({ page }) => {
     await page.goto('/dist/index.html');
     // The navbar contains Home and About links
-    const homeLink = page.locator('.level1Nav a[href="#home/schedule"]');
+    const homeLink = page.locator('.level1Nav a[href="#home/schedule"]').first();
     await expect(homeLink).toBeVisible();
     const aboutLink = page.locator('.level1Nav a[href="#about"]');
     await expect(aboutLink).toBeVisible();
